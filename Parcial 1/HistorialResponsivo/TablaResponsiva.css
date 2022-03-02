@@ -1,15 +1,11 @@
 @media only screen and (max-width: 800px) 
     {
-		/* Cambiar el display de los elementos de tabla a block */
-		/*----------------------------------------------------- */
 		table, thead, tbody, th, td, tr {
 			display: block;
 		}
 
         tr { border: 10px solid rgb(3, 80, 131); }
 
-		/* Esconder los encabezados de la tabla */
-		/*------------------------------------- */
 		thead tr {
 			position: absolute;
 			top: -9999px;
@@ -17,23 +13,19 @@
 		}
 
 		td {
-			position: relative;      /* Cada campo ahora sera una fila*/
-			padding-left: 50%;       /* hacemos espacio para "encabezado de cada fila" */
+			position: relative;
+			padding-left: 50%;
 			border: none;
 			border-bottom: 4px solid rgb(3, 80, 131);
 		}
 
 		td:before {
-			position: absolute;    /* Encabezados */
+			position: absolute;
 			top: 6px;
 			left: 6px;
 			width: 45%;
 			padding-right: 10px;
 		}
-
-
-		/* Agrega "encabezado" a la izquierda (before) de cada dato */
-		/* td:nth-of-type(1):before { content: "Nombre"; } */
 		td:nth-of-type(1):before { content: "Nivel educativo"; }
 		td:nth-of-type(2):before { content: "Escolaridad"; }
 		td:nth-of-type(3):before { content: "Nombre de institución"; }

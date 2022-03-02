@@ -11,13 +11,11 @@ ul {
     margin: auto;
 }
 
-/* Inicialmente los submenús estan escondidos */
 ul > li > ul {
     display: none;
 }
 
-/* Los submenús solo se mostrarán cuando el usuario pase el ratón sobre 
-   las opciones (li:hover) */
+
 ul > li:hover > ul {
     display: block;
     height: 100%;

@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    width: 200px;
+    height: 500px;
+    margin: auto;
+}
+
+/* Inicialmente los submenús estan escondidos */
+ul > li > ul {
+    display: none;
+}
+
+/* Los submenús solo se mostrarán cuando el usuario pase el ratón sobre 
+   las opciones (li:hover) */
+ul > li:hover > ul {
+    display: block;
+    height: 100%;
+}
+
+.menu {
+    background: rgb(207, 72, 31);
+    color: white;
+}
+
+.subMenu {
+    padding-left: 20px;
+    background: rgb(255, 145, 126);
+    color: white;
+}

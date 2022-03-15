@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(38, 105, 192);
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.caja1{
+    order: 0;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(24, 46, 145);
+    margin: 10px;
+    color: white;
+}
+
+.caja2{
+    order: 3;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(24, 46, 145);
+    margin: 10px;
+    color: white;
+}
+
+.caja3{
+    order: 2;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(24, 46, 145);
+    margin: 10px;
+    color: white;
+}
+
+.caja4{
+    order: 2;
+    width: 150px;
+    height: 150px;
+    background-color: rgb(24, 46, 145);
+    margin: 10px;
+    color: white;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Evento Grid</title>
+</head>
+
+<body>
+   <div id="idcontene" class="contenedor">
+       <div class="caja" id="caja1">Caja 1</div>
+       <div class="caja" id="caja2">Caja 2<br><br>19100165 Claudio José de la Rosa Torres</div>
+       <div class="caja" id="caja3">Caja 3</div>
+       <div class="caja" id="caja4">Caja 4</div>
+       <div class="caja" id="caja5">Caja 5<br><br>Programación Web</div>
+   </div>
+
+   <script>
+       window.onload =function(){
+    document.getElementById("idcontene").addEventListener("click",function(evento){
+        console.log(evento.target.id);
+    document.getElementById(evento.target.id).classList.toggle("cajaNueva");
+    });
+}
+   </script>
+</body>
+</html>

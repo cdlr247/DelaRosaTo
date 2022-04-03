@@ -1,0 +1,12 @@
+.container-bg{
+    background-color: rgb(14, 57, 173);
+    border-radius: 30px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 15px;
+}
+
+.container-bg input, .container-bg select{
+    background-color: rgb(193, 209, 255);
+}

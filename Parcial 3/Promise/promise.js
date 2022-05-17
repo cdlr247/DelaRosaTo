@@ -1,3 +1,4 @@
+$(document).ready(function() {
 $('#btnPromise').click(function() {
     let promesa = new Promise(function(resolve,reject){
         var solicitud = new XMLHttpRequest();
@@ -18,5 +19,6 @@ $('#btnPromise').click(function() {
             }};
             solicitud.open("GET", "encabezado.txt", true);
             solicitud.send();
-        }).then(value => document.getElementById("enca").innerHTML = value);*/
+        }).then(value => document.getElementById("encabezado").innerHTML = value);*/
     });
+});

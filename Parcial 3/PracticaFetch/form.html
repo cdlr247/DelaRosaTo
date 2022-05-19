@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EventoJS</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="estilofrm.css">
+    <script src="btn.js"></script>
+    <script src="promise.js"></script>
+    
+</head>
+<body>
+    <br>
+    <div class="container-bg">
+    <br>
+    <div class="container">
+        <br>
+        <form name="frm" class="form">
+            <h3 id="encabezado">Rellene el siguiente formulario</h3>
+            <div class="row">
+                <div class="form-group col-sm-4 col-md-4 col-lg-4">
+                    <label for="NControl" class="control-label">Número de control</label>
+                    <input id="NControl" type="text" class="form-control" oninput="ajaxFunction();"/>
+                </div>
+
+                <div class="form-group col-sm-8 col-md-8 col-lg-8">
+                    <label for="Carrera" class="control-label">Carrera</label>
+                    <select id="Carrera" type="text" class="form-control">
+                        <option selected>Ing. en Sistemas Computacionales</option>
+                        <option>Ing. Electrónica</option>
+                        <option>Contabilidad</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-sm-4 col-md-6 col-lg-4">
+                    <label for="Creditos" class="control-label">Créditos</label>
+                    <input id="Creditos" type="text" class="form-control"/>
+                </div>
+
+                <div class="form-group col-sm-4 col-md-6 col-lg-4">
+                    <label for="Semestre" class="control-label">Semestre</label>
+                    <input id="Semestre" type="text" class="form-control"/>
+                </div>
+                
+                <div class="form-group col-sm-4 col-md-12 col-lg-4">
+                    <label for="Tipo" class="control-label">Tipo</label>
+                    <select id="Tipo" type="text" class="form-control">
+                        <option selected>Regular</option>
+                        <option>Irregular</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="form-group col-sm-12 col-md-12 col-lg-4">
+                    <label for="Nombre" class="control-label">Nombre(s)</label>
+                    <input id="Nombre" type="text" class="form-control"/>
+                </div>
+
+                <div class="form-group col-sm-12 col-md-6 col-lg-4">
+                    <label for="ApellidoP" class="control-label">Apellido Paterno</label>
+                    <input id="ApellidoP" type="text" class="form-control"/>
+                </div>
+                <div class="form-group col-sm-12 col-md-6 col-lg-4">
+                    <label for="ApellidoM" class="control-label">Apellido Materno</label>
+                    <input id="ApellidoM" type="text" class="form-control"/>
+                </div>
+            </div>
+            <br>
+
+            <div class="row">
+                <div class="form-group col-sm-12 col-md-8 col-lg-8">
+                    <label for="Correo" class="control-label">Correo electrónico</label>
+                    <input id="Correo" type="text" class="form-control"/>
+                </div>
+
+                <div class="form-group col-sm-12 col-md-4 col-lg-4">
+                    <label for="Telefono" class="control-label">Teléfono</label>
+                    <input id="Telefono" type="text" class="form-control"/>
+                </div>
+
+                <div class="form-group col-sm-12 col-md-12 col-lg-12">
+                    <label for="Direccion" class="control-label">Dirección</label>
+                    <input id="Direccion" type="text" class="form-control"/>
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+
+            <button id="btn1" type="button" class="btn btn-primary">REGISTRAR</button>
+      <button id="btn2" type="button" class="btn btn-default" data-toggle="modal" data-target="#modal1">Sin java</button>
+      <button id="btn3" type="button" class="btn btn-default" data-toggle="modal">Con java</button>
+
+      <div class="alert alert-primary alert-dismissible collapse" role="alert" id="alerta1">
+        Comentario
+        <button id="btncloseAlert" type="button" class="close"  aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+              comentario
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button id="btnjson" type="button" class="btn btn-primary" title="Obtiene Json">Json</button>
+      <button id="btnPromise" type="button" class="btn btn-primary" title="Promise">Promise</button>
+      <button id="btnFetch" type="button" class="btn btn-primary" title="Fetch">Fetch</button>
+    </form>
+
+      <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                //console.log("click en bt1")
+                $('#alerta1').show();
+                
+            });
+            $('#btncloseAlert').click(function(){
+                $('#alerta1').hide();
+            });
+            $("#btn2").click(function(){
+                console.log("click en bt2")
+                
+            });
+            $("#btn3").click(function(){
+                //console.log("click en bt1")
+                $('#modal1').modal();
+                
+            });
+        });
+
+        function ajaxFunction(){
+        var ajaxRequest;
+        ajaxRequest = new XMLHttpRequest();
+
+        ajaxRequest.onreadystatechange = function() {
+            if(ajaxRequest.readyState == 4)
+            {  document.getElementById("encabezado").innerHTML = ajaxRequest.responseText; }
+        };
+
+        ajaxRequest.open("GET", "hora.php", true);
+        ajaxRequest.send();
+        }
+    </script>    
+    </form>
+    </div>
+    <br>
+    </div>
+    <br>
+</body>
+</html>

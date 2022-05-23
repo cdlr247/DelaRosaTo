@@ -1,6 +1,6 @@
-create database n19100165;
+create database [19100165];
 
-use n19100165;
+use [19100165];
 
 create table Alumno(
 NumControl int not null,

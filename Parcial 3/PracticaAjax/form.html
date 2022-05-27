@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EventoJS</title>
-
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
@@ -19,11 +19,12 @@
     <div class="container">
         <br>
         <form name="frm" class="form">
+        <script src="Ajax.js"></script>
             <h3 id="encabezado">Rellene el siguiente formulario</h3>
             <div class="row">
                 <div class="form-group col-sm-4 col-md-4 col-lg-4">
                     <label for="NControl" class="control-label">Número de control</label>
-                    <input id="NControl" type="text" class="form-control" oninput="ajaxFunction();"/>
+                    <input id="NControl" type="text" class="form-control"/>
                 </div>
 
                 <div class="form-group col-sm-8 col-md-8 col-lg-8">
@@ -94,6 +95,8 @@
             <button id="btn1" type="button" class="btn btn-primary">REGISTRAR</button>
       <button id="btn2" type="button" class="btn btn-default" data-toggle="modal" data-target="#modal1">Sin java</button>
       <button id="btn3" type="button" class="btn btn-default" data-toggle="modal">Con java</button>
+      
+
 
       <div class="alert alert-primary alert-dismissible collapse" role="alert" id="alerta1">
         Comentario
@@ -123,6 +126,9 @@
         </div>
       </div>
 
+      <button id="btnAjax" type="button" class="btn btn-primary">AJAX</button>
+
+      
       <script>
         $(document).ready(function(){
             $("#btn1").click(function(){
@@ -143,19 +149,6 @@
                 
             });
         });
-
-        function ajaxFunction(){
-        var ajaxRequest;
-        ajaxRequest = new XMLHttpRequest();
-
-        ajaxRequest.onreadystatechange = function() {
-            if(ajaxRequest.readyState == 4)
-            {  document.getElementById("encabezado").innerHTML = ajaxRequest.responseText; }
-        };
-
-        ajaxRequest.open("GET", "02_cargarControl.php", true);
-        ajaxRequest.send();
-        }
     </script>    
     </form>
     </div>
